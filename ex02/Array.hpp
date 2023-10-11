@@ -7,7 +7,7 @@ class Array
 {
 private:
 	T		*_array;
-	int		_size;
+	size_t	_size;
 public:
 	Array(); // Default constructor
 	Array(const Array &src); // Copy constructor
@@ -15,13 +15,16 @@ public:
 	~Array(); // Destructor
 	Array	&operator=(const Array &src); // Assignment operator
 
-	T		&operator[](int i);
-	int		size() const;
+	T		&operator[](size_t i) const;
+	size_t	size() const;
 
 	class OutOfBoundsException : public std::exception
 	{
 		virtual const char *what() const throw();
 	};
 };
+
+template <typename T>
+std::ostream	&operator<<(std::ostream &o, const Array<T> &src);
 
 #include "Array.tpp"

@@ -14,8 +14,9 @@ int main( void )
 	std::cout << "b:" << b << std::endl;
 	std::cout << "c:" << c << std::endl;
 
+
 	c = a;
-	std::cout << "c:" << c << std::endl;
+	std::cout << std::endl << "c:" << c << std::endl;
 
 	try
 	{

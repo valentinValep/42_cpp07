@@ -18,5 +18,5 @@ int main( void )
 	std::cout << "Printing tab with iter and function print:" << std::endl;
 	iter(tab, TAB_SIZE, print);
 	std::cout << std::endl << "Printing tab with iter and function print2:" << std::endl;
-	iter(tab, TAB_SIZE, print2);
+	iter(tab, TAB_SIZE, print2<int>);
 }
